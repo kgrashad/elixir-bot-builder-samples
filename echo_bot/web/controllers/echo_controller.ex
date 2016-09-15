@@ -17,8 +17,8 @@ defmodule EchoBot.EchoController do
   end
 
   defp get_message(conn, _) do
-    conn |>
-    put_status(:bad_request) |>
-    json(%{ error: "Invalid Request"})
+    conn
+    |> put_status(:bad_request)
+    |> json(%{ error: "Invalid Request"})
   end
 end
