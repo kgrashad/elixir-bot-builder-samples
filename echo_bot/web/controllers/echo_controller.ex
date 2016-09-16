@@ -11,7 +11,7 @@ defmodule EchoBot.EchoController do
     |> Connector.parse_activity
     |> Connector.reply("You said: " <> params["text"])
     
-    conn 
+    conn
     |> put_status(202)
     |> json(%{})
   end
