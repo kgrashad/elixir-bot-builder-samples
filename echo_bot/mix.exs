@@ -34,6 +34,6 @@ defmodule EchoBot.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
-     {:botbuilder, path: "../../elixir-bot-builder", app: false}]
+     {:botbuilder, git: "https://github.com/kgrashad/elixir-bot-builder", ref: "cee08d4", app: false}]
   end
 end
