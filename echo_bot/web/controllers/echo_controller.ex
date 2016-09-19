@@ -6,10 +6,10 @@ defmodule EchoBot.EchoController do
     get_message(conn, params)
   end
 
-  defp get_message(conn,%{} = params) do
+  defp get_message(conn, %{"text" => text} = params) do
     params
     |> Connector.parse_activity
-    |> Connector.reply("You said: " <> params["text"])
+    |> Connector.reply("You said: " <> text)
     
     conn
     |> put_status(202)
