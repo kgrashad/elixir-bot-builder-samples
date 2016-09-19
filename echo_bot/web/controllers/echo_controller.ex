@@ -1,18 +1,24 @@
 defmodule EchoBot.EchoController do
   use EchoBot.Web, :controller
-  alias EchoBot.Models.Message
+  alias BotBuilder.Connector
 
   def echo(conn, params) do
     get_message(conn, params)
   end
 
-  defp get_message(conn, %{"message" => msg}) do
-    json(conn, %{ echoed_message: msg})
+  defp get_message(conn, %{"text" => text} = params) do
+    params
+    |> Connector.parse_activity
+    |> Connector.reply("You said: " <> text)
+    
+    conn
+    |> put_status(202)
+    |> json(%{})
   end
 
   defp get_message(conn, _) do
-    conn |>
-    put_status(:bad_request) |>
-    json(%{ error: "Please specify the 'message' parameter"})
+    conn
+    |> put_status(:bad_request)
+    |> json(%{ error: "Invalid Request"})
   end
 end
