@@ -22,7 +22,7 @@ defmodule EchoBot.Router do
   scope "/api", EchoBot do
     pipe_through :api
 
-    get "/echo", EchoController, :echo
-    post "/echo", EchoController, :echo
+    get "/messages", MessagesController, :messages
+    post "/messages", MessagesController, :messages
   end
 end

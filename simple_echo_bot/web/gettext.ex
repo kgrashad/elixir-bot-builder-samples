@@ -20,5 +20,5 @@ defmodule EchoBot.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :echo_bot
+  use Gettext, otp_app: :simple_echo_bot
 end

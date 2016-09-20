@@ -1,8 +1,8 @@
-defmodule EchoBot.EchoController do
+defmodule EchoBot.MessagesController do
   use EchoBot.Web, :controller
   alias BotBuilder.Connector
 
-  def echo(conn, params) do
+  def messages(conn, params) do
     get_message(conn, params)
   end
 

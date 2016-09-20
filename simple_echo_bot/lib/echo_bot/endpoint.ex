@@ -1,5 +1,5 @@
 defmodule EchoBot.Endpoint do
-  use Phoenix.Endpoint, otp_app: :echo_bot
+  use Phoenix.Endpoint, otp_app: :simple_echo_bot
 
   socket "/socket", EchoBot.UserSocket
 
@@ -8,7 +8,7 @@ defmodule EchoBot.Endpoint do
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :echo_bot, gzip: false,
+    at: "/", from: :simple_echo_bot, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -35,7 +35,7 @@ defmodule EchoBot.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_echo_bot_key",
+    key: "_simple_echo_bot_key",
     signing_salt: "Q4WtYUbH"
 
   plug EchoBot.Router

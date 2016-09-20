@@ -1,19 +1,19 @@
-defmodule EchoBot.EchoControllerTest do
+defmodule EchoBot.MessagesControllerTest do
   use EchoBot.ConnCase
 
-  test "GET /api/echo", %{conn: conn} do
-    conn = get conn, "/api/echo"
+  test "GET /api/messages", %{conn: conn} do
+    conn = get conn, "/api/messages"
     assert json_response(conn, 400)
   end
 
-  test "POST /api/echo", %{conn: conn} do
-    conn = post conn, "/api/echo"
+  test "POST /api/messages", %{conn: conn} do
+    conn = post conn, "/api/messages"
     assert json_response(conn, 400)
   end
 
   # For this test to pass, you must run emulator
   # TODO: how can we stub the API post so we don't need the emulator to be running?
-  test "echo with text parameter", %{conn: conn} do
+  test "messages with text parameter", %{conn: conn} do
     params = %{
       "type": "message",
       "id": "2527a2c005a346f08e4465555e64a3ff",
@@ -37,13 +37,13 @@ defmodule EchoBot.EchoControllerTest do
       "attachments": [],
       "entities": []
     }
-    conn = post conn, echo_path(conn, :echo, params)
+    conn = post conn, messages_path(conn, :messages, params)
     assert Map.equal?(json_response(conn, 202), %{})
   end
 
-  test "echo missing text parameter", %{conn: conn} do
+  test "messages missing text parameter", %{conn: conn} do
     params = %{}
-    conn = post conn, echo_path(conn, :echo, params)
+    conn = post conn, messages_path(conn, :messages, params)
     assert Map.equal?(json_response(conn, 400), %{"error" => "Invalid Request"})
   end
 end

@@ -6,7 +6,7 @@
 use Mix.Config
 
 # Configures the endpoint
-config :echo_bot, EchoBot.Endpoint,
+config :simple_echo_bot, EchoBot.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "hBcZuGs770DfsJd7rcdK/4mhaA7eIvQThkoHMXMvraTPlvWWIiE6N40GytKaVHoV",
   render_errors: [view: EchoBot.ErrorView, accepts: ~w(html json)],
