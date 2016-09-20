@@ -1,5 +1,5 @@
-defmodule EchoBot.MessagesController do
-  use EchoBot.Web, :controller
+defmodule SimpleEchoBot.MessagesController do
+  use SimpleEchoBot.Web, :controller
   alias BotBuilder.Connector
 
   def messages(conn, params) do

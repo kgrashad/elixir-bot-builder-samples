@@ -1,4 +1,4 @@
-defmodule EchoBot.ConnCase do
+defmodule SimpleEchoBot.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -20,10 +20,10 @@ defmodule EchoBot.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      import EchoBot.Router.Helpers
+      import SimpleEchoBot.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint EchoBot.Endpoint
+      @endpoint SimpleEchoBot.Endpoint
     end
   end
 

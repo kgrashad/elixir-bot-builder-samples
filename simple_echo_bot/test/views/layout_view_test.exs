@@ -1,3 +1,3 @@
-defmodule EchoBot.LayoutViewTest do
-  use EchoBot.ConnCase, async: true
+defmodule SimpleEchoBot.LayoutViewTest do
+  use SimpleEchoBot.ConnCase, async: true
 end

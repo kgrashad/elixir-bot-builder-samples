@@ -1,5 +1,5 @@
-defmodule EchoBot.Router do
-  use EchoBot.Web, :router
+defmodule SimpleEchoBot.Router do
+  use SimpleEchoBot.Web, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,13 +13,13 @@ defmodule EchoBot.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", EchoBot do
+  scope "/", SimpleEchoBot do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
   end
 
-  scope "/api", EchoBot do
+  scope "/api", SimpleEchoBot do
     pipe_through :api
 
     get "/messages", MessagesController, :messages

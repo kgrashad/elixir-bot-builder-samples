@@ -1,4 +1,4 @@
-defmodule EchoBot.ChannelCase do
+defmodule SimpleEchoBot.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -22,7 +22,7 @@ defmodule EchoBot.ChannelCase do
 
 
       # The default endpoint for testing
-      @endpoint EchoBot.Endpoint
+      @endpoint SimpleEchoBot.Endpoint
     end
   end
 

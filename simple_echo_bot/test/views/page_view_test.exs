@@ -1,3 +1,3 @@
-defmodule EchoBot.PageViewTest do
-  use EchoBot.ConnCase, async: true
+defmodule SimpleEchoBot.PageViewTest do
+  use SimpleEchoBot.ConnCase, async: true
 end

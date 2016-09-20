@@ -1,3 +1,3 @@
-defmodule EchoBot.PageView do
-  use EchoBot.Web, :view
+defmodule SimpleEchoBot.PageView do
+  use SimpleEchoBot.Web, :view
 end

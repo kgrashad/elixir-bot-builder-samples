@@ -1,3 +1,3 @@
-defmodule EchoBot.LayoutView do
-  use EchoBot.Web, :view
+defmodule SimpleEchoBot.LayoutView do
+  use SimpleEchoBot.Web, :view
 end

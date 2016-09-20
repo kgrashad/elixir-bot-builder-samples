@@ -1,12 +1,12 @@
-defmodule EchoBot.Web do
+defmodule SimpleEchoBot.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use EchoBot.Web, :controller
-      use EchoBot.Web, :view
+      use SimpleEchoBot.Web, :controller
+      use SimpleEchoBot.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -26,8 +26,8 @@ defmodule EchoBot.Web do
     quote do
       use Phoenix.Controller
 
-      import EchoBot.Router.Helpers
-      import EchoBot.Gettext
+      import SimpleEchoBot.Router.Helpers
+      import SimpleEchoBot.Gettext
     end
   end
 
@@ -41,9 +41,9 @@ defmodule EchoBot.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import EchoBot.Router.Helpers
-      import EchoBot.ErrorHelpers
-      import EchoBot.Gettext
+      import SimpleEchoBot.Router.Helpers
+      import SimpleEchoBot.ErrorHelpers
+      import SimpleEchoBot.Gettext
     end
   end
 
@@ -56,7 +56,7 @@ defmodule EchoBot.Web do
   def channel do
     quote do
       use Phoenix.Channel
-      import EchoBot.Gettext
+      import SimpleEchoBot.Gettext
     end
   end
 

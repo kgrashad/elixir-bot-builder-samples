@@ -1,5 +1,5 @@
-defmodule EchoBot.ErrorView do
-  use EchoBot.Web, :view
+defmodule SimpleEchoBot.ErrorView do
+  use SimpleEchoBot.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

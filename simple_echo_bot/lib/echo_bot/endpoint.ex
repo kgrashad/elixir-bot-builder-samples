@@ -1,7 +1,7 @@
-defmodule EchoBot.Endpoint do
+defmodule SimpleEchoBot.Endpoint do
   use Phoenix.Endpoint, otp_app: :simple_echo_bot
 
-  socket "/socket", EchoBot.UserSocket
+  socket "/socket", SimpleEchoBot.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -38,5 +38,5 @@ defmodule EchoBot.Endpoint do
     key: "_simple_echo_bot_key",
     signing_salt: "Q4WtYUbH"
 
-  plug EchoBot.Router
+  plug SimpleEchoBot.Router
 end

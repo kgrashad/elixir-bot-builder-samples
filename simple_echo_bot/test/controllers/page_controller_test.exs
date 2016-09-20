@@ -1,5 +1,5 @@
-defmodule EchoBot.PageControllerTest do
-  use EchoBot.ConnCase
+defmodule SimpleEchoBot.PageControllerTest do
+  use SimpleEchoBot.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

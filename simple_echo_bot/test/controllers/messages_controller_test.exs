@@ -1,5 +1,5 @@
-defmodule EchoBot.MessagesControllerTest do
-  use EchoBot.ConnCase
+defmodule SimpleEchoBot.MessagesControllerTest do
+  use SimpleEchoBot.ConnCase
 
   test "GET /api/messages", %{conn: conn} do
     conn = get conn, "/api/messages"

@@ -1,4 +1,4 @@
-# EchoBot
+# SimpleEchoBot
 
 To start your Phoenix app:
 
